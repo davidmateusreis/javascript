@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: thistle;
+            font: normal 18px Tahoma;
+        }
+        h1 {
+            color: rgb(168, 121, 121);
+        }
+        div#res {
+            color: rgb(214, 90, 152);
+            font: bold 40px Tahoma;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imigração</h1>
+    Em qual país você vive? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Clique para saber a nacionalidade!" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtpais = window.document.querySelector('input#txtnac')
+            var nac = window.document.querySelector('div#res')
+            if (txtpais.value == 'Brasil') {
+                nac.innerHTML = `Você é brasileiro!`
+            } else {
+                nac.innerHTML =  `Você é estrangeiro!`
+            }
+        }
+    </script>   
+</body>
+</html>
